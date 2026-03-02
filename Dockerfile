@@ -11,4 +11,4 @@ COPY pentaho/reports/ /app/pentahoReports/
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-Xmx1024m","-jar","/app/app.jar"]
+ENTRYPOINT ["java","-Dloader.path=/app/lib","-Xmx1024m","-jar","/app/app.jar"]
